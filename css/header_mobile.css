@@ -1,0 +1,163 @@
+ * {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+@font-face {
+    font-family: 'PT Sans Caption';
+    src: url('/fonts/PTSans-Caption.woff2') format('woff2'),
+    url('/fonts/PTSans-Caption.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans Caption';
+    src: url('/fonts/PTSans-CaptionBold.woff2') format('woff2'),
+    url('/fonts/PTSans-CaptionBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/PTSans-BoldItalic.woff2') format('woff2'),
+    url('/fonts/PTSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/PTSans-Regular.woff2') format('woff2'),
+    url('/fonts/PTSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/PTSans-Italic.woff2') format('woff2'),
+    url('/fonts/PTSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/fonts/PTSans-Bold.woff2') format('woff2'),
+    url('/fonts/PTSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    font-family:'PT Sans Regular',sans-serif ;
+}
+
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 32px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 20px;
+}
+
+ul,ol,button {
+    font-size: 14px;
+}
+:root {
+    --primaryColor:#FF6600;
+    --primaryHoverColor:#F25800;
+}
+
+
+.header-table-mobile {
+    max-width: 850px;
+   
+}
+
+.header-content-mobile {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .header-content-mobile {
+        position: relative;
+        width: 98%;
+        height: 80px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 5px 0 5px;
+    }
+}
+
+.menu-dropdown__item-mobile,.navigation-menu__input-mobile {
+    font-family: 'PT Sans',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: black;
+}
+
+
+.button_burger-mobile {
+    cursor: pointer;
+}
+
+
+.navigation-menu-mobile {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.navigation-menu__item-number-mobile {
+    font-family: 'PT Sans Caption',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    color: #6F6F6F;
+}
+
+.navigation-menu__input-mobile {
+    margin-top: 10px;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.menu_dropdown_button_registration-mobile {
+    background: no-repeat;
+    color: var(--primaryColor);
+}
+
+
+.menu_dropdown_button_registration-mobile:hover {
+    color: var(--primaryHoverColor);
+}
+
+
+
+
+
+
+
