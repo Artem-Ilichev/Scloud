@@ -1,8 +1,27 @@
+.version-compare-slider {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .version-compare-slider {
+      display: block;
+        padding-left: 10px;
+    }
+}
+
+.version-compare-slider .swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--primaryColor);
+}
+
+
 .version-compare-mobile {
     display: none;
 }
 
-@media(max-width: 720px) {
+@media(max-width: 768px) {
     .version-compare-mobile {
         display: flex;
         width: 98%;
@@ -13,7 +32,7 @@
         box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
         border-radius: 8px 8px 10px 10px;
         margin-top: 24px;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
 }
 

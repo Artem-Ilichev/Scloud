@@ -23,31 +23,73 @@ buttons.forEach(function (item) {
 const buttonHamburger = document.querySelectorAll('.button-burger');
 const headerMenuDrop = document.querySelectorAll('.navigation-menu-dropdown');
 
-buttonHamburger.forEach(button => button.addEventListener('click', function () {
-    headerMenuDrop.classList.toggle('navigation-menu-dropdown--open')
-}));
-
+buttonHamburger.forEach(function (elements){
+    elements.addEventListener('click',function () {
+        headerMenuDrop.forEach(function (menu) {
+            menu.classList.toggle('navigation-menu-dropdown--open')
+        })
+    })
+})
 
 
 const swiper = new Swiper('.slider', {
 
     direction: 'horizontal',
-
+    loop:true,
 
 
     clickAble: true,
     pagination: {
       el: '.swiper-pagination',
-        clickable: true
+        clickable: true,
+        dynamicBullets:true
     },
     navigation:{
         nextEl:'.slider__right-arrow',
         prevEl:'.slider__left-arrow',
-        disabledClass:'arrow_active'
-    }
+    },
+
 });
 
 console.log(swiper);
+
+const swiperMobile = new Swiper('.swiper', {
+
+    direction: 'horizontal',
+    loop:true,
+
+
+    clickAble: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets:true
+    },
+
+});
+
+console.log(swiperMobile);
+
+const arrowLeft = document.querySelector('.slider__left-arrow');
+const arrowRight = document.querySelector('.slider__right-arrow');
+
+arrowRight.addEventListener('click',function () {
+    if (arrowLeft.classList.contains('arrow-active')){
+        arrowLeft.classList.remove('arrow-active')
+    }
+    arrowRight.classList.add('arrow-active')
+
+})
+
+arrowLeft.addEventListener('click',function () {
+    if (arrowRight.classList.contains('arrow-active')){
+        arrowRight.classList.remove('arrow-active')
+    }
+    arrowLeft.classList.add('arrow-active')
+})
+
+
+
 
 
 
