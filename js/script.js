@@ -35,14 +35,14 @@ buttonHamburger.forEach(function (elements){
 const swiper = new Swiper('.slider', {
 
     direction: 'horizontal',
-    loop:true,
+    disabledClass:'.swiper-button-disabled',
 
 
     clickAble: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-maxsize-pagination',
         clickable: true,
-        dynamicBullets:true
+
     },
     navigation:{
         nextEl:'.slider__right-arrow',
@@ -51,42 +51,25 @@ const swiper = new Swiper('.slider', {
 
 });
 
-console.log(swiper);
+
 
 const swiperMobile = new Swiper('.swiper', {
 
     direction: 'horizontal',
-    loop:true,
+
 
 
     clickAble: true,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        dynamicBullets:true
     },
 
 });
 
-console.log(swiperMobile);
 
-const arrowLeft = document.querySelector('.slider__left-arrow');
-const arrowRight = document.querySelector('.slider__right-arrow');
 
-arrowRight.addEventListener('click',function () {
-    if (arrowLeft.classList.contains('arrow-active')){
-        arrowLeft.classList.remove('arrow-active')
-    }
-    arrowRight.classList.add('arrow-active')
 
-})
-
-arrowLeft.addEventListener('click',function () {
-    if (arrowRight.classList.contains('arrow-active')){
-        arrowRight.classList.remove('arrow-active')
-    }
-    arrowLeft.classList.add('arrow-active')
-})
 
 
 

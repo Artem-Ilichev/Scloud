@@ -12,11 +12,10 @@
 
 .header-content-tablet {
     min-height: 71px;
-    width: 85%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
 }
 
 @media (max-width: 850px) {
